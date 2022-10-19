@@ -1,0 +1,19 @@
+@use '../util' as *;
+
+.container {
+  max-width: rem(1140);
+  margin: 0 auto;
+}
+
+.section {
+  margin-bottom: rem(64);
+}
+
+.grid {
+  display: grid;
+}
+
+.header {
+  position: relative;
+  overflow: hidden;
+}

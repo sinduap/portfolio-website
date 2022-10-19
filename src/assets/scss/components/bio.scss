@@ -1,0 +1,76 @@
+@use '../util' as *;
+
+.bio {
+  padding-top: rem(88);
+  background: var(--linear-gradient), url(../img/home-bg.jpg);
+  font-family: var(--ff-mono);
+  color: var(--col-white);
+
+  &__container {
+    grid-template-columns: 1fr 2fr;
+    column-gap: rem(32);
+  }
+
+  &__img {
+    width: 90%;
+    height: rem(380);
+    object-fit: cover;
+    object-position: top;
+    border-radius: rem(5);
+    transform: translateY(rem(32));
+    box-shadow: 0 0 rem(28) rgb(96 96 96 / 34%);
+  }
+
+  &__content {
+    margin-top: rem(16);
+  }
+
+  &__name {
+    font-size: var(--fs-h1);
+    font-weight: var(--fw-medium);
+  }
+
+  &__title {
+    font-size: var(--fs-lg);
+    font-weight: var(--fw-medium);
+  }
+
+  &__details {
+    margin: rem(32) 0;
+
+    dt {
+      float: left;
+      text-transform: uppercase;
+      opacity: 0.4;
+      font-weight: var(--fw-bold);
+    }
+
+    dd {
+      padding-left: rem(112);
+
+      &:not(:last-of-type) {
+        margin-bottom: rem(8);
+      }
+    }
+  }
+
+  &__socials {
+    display: flex;
+    column-gap: rem(16);
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      opacity: 0.4;
+      font-size: rem(24);
+      color: currentColor;
+      transition: 0.3s;
+    }
+
+    &:hover,
+    &:active {
+      opacity: 1;
+    }
+  }
+}

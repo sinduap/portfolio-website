@@ -1,0 +1,18 @@
+$breakpoint-device: (
+  'desktop': '75em',
+  'tab-land': '62em',
+  'tab-port': '48em',
+  'phone-land': '36em',
+  'phone-port': '21.85em',
+);
+// 1200px desk
+//992px tab land
+//768px tab port
+//576px phone land
+//350px phone port
+
+@mixin breakpoint($device) {
+  @media (max-width: map-get($breakpoint-device, $device)) {
+    @content;
+  }
+}
