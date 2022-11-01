@@ -6,7 +6,11 @@
 }
 
 .section {
-  margin-bottom: rem(64);
+  margin-bottom: rem(112);
+
+  &__header {
+    margin-bottom: rem(32);
+  }
 }
 
 .grid {
@@ -15,5 +19,4 @@
 
 .header {
   position: relative;
-  overflow: hidden;
 }

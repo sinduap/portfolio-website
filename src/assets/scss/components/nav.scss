@@ -1,21 +1,22 @@
 @use '../util' as *;
 
 .nav {
+  /*======== Sticky Header ========*/
   &--sticky {
     position: fixed;
     color: var(--col-text);
     background-color: var(--col-bg);
-    box-shadow: 0 0 26px rgb(80 80 80 / 34%);
+    box-shadow: var(--shadow);
   }
 
+  color: var(--col-white);
+  height: rem(88);
+  font-family: var(--ff-mono);
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 100;
-  color: var(--col-white);
-  height: rem(88);
-  font-family: var(--ff-mono);
+  z-index: 10;
 
   &__container {
     height: 100%;
@@ -31,19 +32,19 @@
   &__link {
     &::after {
       content: '';
-      width: 8px;
-      height: 2px;
+      display: block;
       background-color: currentColor;
       position: absolute;
-      bottom: 2px;
-      right: -10px;
-      display: block;
       opacity: 0;
+      height: rem(2);
+      width: rem(8);
+      right: rem(-10);
+      bottom: rem(2);
     }
 
     &,
     &:link,
-    &:active {
+    &:visited {
       text-transform: uppercase;
       font-weight: var(--fw-bold);
       font-size: var(--fs-sm);

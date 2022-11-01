@@ -1,0 +1,31 @@
+@use '../util/' as *;
+
+.intro {
+  &__paragraph {
+    font-size: var(--fs-lg);
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: rem(32);
+  }
+
+  &__download {
+    padding: rem(16) rem(32);
+    background-color: var(--col-primary);
+    color: var(--col-white);
+    border-radius: 100px;
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-bold);
+    display: inline-flex;
+    align-items: center;
+    column-gap: rem(8);
+    transition: 0.3s;
+  }
+
+  &__download:hover {
+    background-color: var(--col-primary-alt);
+  }
+
+  &__download:hover &__icon {
+    animation: 1s bounce-down infinite;
+  }
+}

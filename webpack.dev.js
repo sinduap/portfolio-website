@@ -5,8 +5,8 @@ module.exports = {
   entry: {
     main: './src/assets/js/main.js',
     common: './src/assets/js/common.js',
-    style: './src/assets/scss/main.scss',
-    dark: './src/assets/scss/themes/dark.scss',
+    // style: './src/assets/scss/main.scss',
+    // dark: './src/assets/scss/themes/dark.scss',
   },
 
   devServer: {
@@ -46,13 +46,13 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
       inject: true,
-      chunks: ['main', 'common', 'style', 'dark'],
+      chunks: ['main', 'common'],
       filename: 'index.html',
     }),
     new HtmlWebpackPlugin({
       template: './src/blog.html',
       inject: true,
-      chunks: ['common', 'style', 'dark'],
+      chunks: ['common'],
       filename: 'blog.html',
     }),
     new MiniCssExtractPlugin({

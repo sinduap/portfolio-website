@@ -16,9 +16,9 @@
     height: rem(380);
     object-fit: cover;
     object-position: top;
-    border-radius: rem(5);
+    border-radius: rem(8);
     transform: translateY(rem(32));
-    box-shadow: 0 0 rem(28) rgb(96 96 96 / 34%);
+    box-shadow: var(--shadow);
   }
 
   &__content {
@@ -59,7 +59,8 @@
     column-gap: rem(16);
   }
 
-  &__link {
+  &__social-link {
+    &,
     &:link,
     &:visited {
       opacity: 0.4;
