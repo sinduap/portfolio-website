@@ -1,6 +1,11 @@
 @use '../util/' as *;
 
 .intro {
+  &__heading {
+    font-size: var(--fs-h2);
+    margin-bottom: rem(32);
+  }
+
   &__paragraph {
     font-size: var(--fs-lg);
     line-height: 1.8;
@@ -26,6 +31,6 @@
   }
 
   &__download:hover &__icon {
-    animation: 1s bounce-down infinite;
+    animation: 1s bounce infinite;
   }
 }

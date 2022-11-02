@@ -1,0 +1,69 @@
+@use '../util/' as *;
+
+.resume {
+  &__heading {
+    font-size: var(--fs-h2);
+    margin-bottom: rem(32);
+  }
+
+  &__container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(32);
+  }
+
+  &__data {
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-family: var(--ff-mono);
+    font-size: var(--fs-sm);
+    color: var(--col-title);
+    opacity: 0.6;
+
+    letter-spacing: rem(4);
+    margin-bottom: rem(32);
+  }
+
+  &__item {
+    padding-left: rem(32);
+    border-left: 2px solid var(--col-primary);
+    position: relative;
+
+    &:not(:last-of-type) {
+      padding-bottom: rem(40);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: rem(-9);
+      top: 0;
+      width: rem(16);
+      height: rem(16);
+      border-radius: 50%;
+      border: 2px solid var(--col-primary);
+      background-color: #fff;
+    }
+  }
+
+  &__place {
+    text-transform: uppercase;
+    font-family: var(--ff-mono);
+    font-size: var(--fs-sm);
+    color: var(--col-title);
+    font-weight: var(--fw-bold);
+    margin-bottom: rem(4);
+  }
+
+  &__year {
+    color: var(--col-title);
+    opacity: 0.6;
+    margin-bottom: rem(8);
+    font-size: var(--fs-sm);
+  }
+
+  &__desc {
+    font-size: var(--fs-lg);
+  }
+}
